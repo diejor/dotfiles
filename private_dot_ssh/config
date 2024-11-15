@@ -1,0 +1,6 @@
+Host cocolab
+    HostName 10.150.42.27
+    User dar220007
+    ForwardX11 yes
+    ForwardX11Trusted yes
+
