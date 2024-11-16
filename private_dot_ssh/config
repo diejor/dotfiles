@@ -1,6 +1,7 @@
 Host cocolab
     HostName 10.150.42.27
     User dar220007
+    RemoteCommand fish -l
     ForwardX11 yes
     ForwardX11Trusted yes
 
