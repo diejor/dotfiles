@@ -15,6 +15,10 @@ return require('packer').startup(function(use)
   use { 'ellisonleao/gruvbox.nvim' }
   use({ 'rose-pine/neovim', as = 'rose-pine' })
   use { 'mbbill/undotree' }
+  use({
+    "aserowy/tmux.nvim",
+    config = function() return require("tmux").setup() end
+})
 
   use { 'theprimeagen/harpoon' }
   use 'andweeb/presence.nvim'
