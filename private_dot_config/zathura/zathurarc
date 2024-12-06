@@ -1,3 +1,6 @@
+
+set database sqlite
+
 # https://github.com/rose-pine/rose-pine-theme
 # Soho vibes for Zathura: Rosé Pine
 #
