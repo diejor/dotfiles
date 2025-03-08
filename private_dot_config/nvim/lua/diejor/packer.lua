@@ -20,9 +20,6 @@ return require('packer').startup(function(use)
     config = function() return require("tmux").setup() end
 })
 
-  use { 'theprimeagen/harpoon' }
-  use 'andweeb/presence.nvim'
-
   use { 'tpope/vim-fugitive' }
   use {
 	  'VonHeikemen/lsp-zero.nvim',
