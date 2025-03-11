@@ -4,4 +4,4 @@ vim.o.background = "dark"
 
 -- vim.cmd([[colorscheme gruvbox]])
 -- vim.cmd('colorscheme rose-pine')
-vim.cmd('set notermguicolors')
+vim.cmd('colorscheme lunaperche')
