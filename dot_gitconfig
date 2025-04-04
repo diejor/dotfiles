@@ -6,4 +6,43 @@
 	helper = !/usr/bin/gh auth git-credential
 [user]
 	email = diejorarr@gmail.com
-	name = diejor
+	name = Diego Rodrigues
+[depot-tools]
+	useNewAuthStack = 1
+[credential "https://android.googlesource.com"]
+	helper = 
+	helper = luci
+[credential "https://aomedia.googlesource.com"]
+	helper = 
+	helper = luci
+[credential "https://beto-core.googlesource.com"]
+	helper = 
+	helper = luci
+[credential "https://boringssl.googlesource.com"]
+	helper = 
+	helper = luci
+[credential "https://chromium.googlesource.com"]
+	helper = 
+	helper = luci
+[credential "https://dawn.googlesource.com"]
+	helper = 
+	helper = luci
+[credential "https://pdfium.googlesource.com"]
+	helper = 
+	helper = luci
+[credential "https://quiche.googlesource.com"]
+	helper = 
+	helper = luci
+[credential "https://skia.googlesource.com"]
+	helper = 
+	helper = luci
+[credential "https://swiftshader.googlesource.com"]
+	helper = 
+	helper = luci
+[credential "https://webrtc.googlesource.com"]
+	helper = 
+	helper = luci
+[core]
+	autocrlf = false
+	filemode = false
+
