@@ -1,0 +1,10 @@
+[Unit]
+Description=Run wlsunset on startup
+
+[Service]
+ExecStart=/usr/bin/wlsunset -S 05:30 -s 17:40
+Type=simple
+
+[Install]
+WantedBy=default.target
+
