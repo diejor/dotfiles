@@ -46,3 +46,6 @@
 	autocrlf = false
 	filemode = false
 
+[alias]
+	adog = log --all --decorate --oneline --graph
+
