@@ -1,0 +1,7 @@
+# nvim config is its own git repo; chezmoi only clones it, never manages it.
+# No refreshPeriod, so chezmoi leaves an existing checkout alone. Update via git.
+[".config/nvim"]
+    type = "git-repo"
+    url = "https://github.com/diejor/nvim-config.git"
+    [".config/nvim".clone]
+        args = ["--depth", "1"]
