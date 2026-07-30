@@ -4,3 +4,8 @@ encryption = "age"
     identity = "~/.config/chezmoi/key.txt"
     recipient = "age1lrplrq7psg0ua4p0etxdkjejled2kveux9l3y3syf6lt6fl093tqxxxlfa"
 
+[git]
+    # Every `chezmoi add`/`re-add` lands a commit, so work is never left untracked.
+    # autoPush stays off until the remote is private.
+    autoCommit = true
+    autoPush = false

@@ -1,7 +1,14 @@
-# nvim config is its own git repo; chezmoi only clones it, never manages it.
-# No refreshPeriod, so chezmoi leaves an existing checkout alone. Update via git.
+# Upstream repos, cloned not vendored. No refreshPeriod, so chezmoi leaves an
+# existing checkout alone -- updates stay a deliberate `git pull`.
+
 [".config/nvim"]
     type = "git-repo"
     url = "https://github.com/diejor/nvim-config.git"
     [".config/nvim".clone]
+        args = ["--depth", "1"]
+
+[".tmux/plugins/tpm"]
+    type = "git-repo"
+    url = "https://github.com/tmux-plugins/tpm.git"
+    [".tmux/plugins/tpm".clone]
         args = ["--depth", "1"]
