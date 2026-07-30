@@ -1,3 +1,8 @@
+{{- $gpuGuess := "intel" -}}
+{{- if lookPath "nvidia-smi" }}{{ $gpuGuess = "nvidia" }}{{ end -}}
+{{- $role := promptStringOnce . "role" "role (laptop|desktop|server)" -}}
+{{- $gpu := promptStringOnce . "gpu" "gpu (nvidia|intel|none)" $gpuGuess -}}
+
 encryption = "age"
 
 [age]
@@ -9,3 +14,9 @@ encryption = "age"
     # autoPush stays off until the remote is private.
     autoCommit = true
     autoPush = false
+
+[data]
+    role = {{ $role | quote }}
+    gpu = {{ $gpu | quote }}
+    gui = {{ ne $role "server" }}
+    scale = {{ if eq $role "laptop" }}"1.5"{{ else }}"1.0"{{ end }}

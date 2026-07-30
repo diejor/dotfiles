@@ -2,3 +2,13 @@ key.txt.age
 conda.fish
 .config/fish/fish_variables
 
+{{ if not .gui }}
+.config/alacritty
+.config/assets
+.config/dunst
+.config/hypr
+.config/systemd
+.config/waybar
+.config/xournalpp
+.config/zathura
+{{ end }}

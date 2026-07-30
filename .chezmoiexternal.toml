@@ -1,5 +1,5 @@
-# Upstream repos, cloned not vendored. No refreshPeriod, so chezmoi leaves an
-# existing checkout alone -- updates stay a deliberate `git pull`.
+# Upstream repos, cloned not vendored. chezmoi runs `git pull` in each on apply,
+# so these track their remotes rather than pinning.
 
 [".config/nvim"]
     type = "git-repo"
