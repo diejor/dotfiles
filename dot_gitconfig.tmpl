@@ -4,6 +4,9 @@
 
 [core]
 	autocrlf = false
+	# Setting this overrides git's XDG default of ~/.config/git/ignore, which
+	# is why that file goes inert once this is present.
+	excludesfile = ~/.gitignore_global
 
 [alias]
 	adog = log --all --decorate --oneline --graph

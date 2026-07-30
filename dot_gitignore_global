@@ -1,0 +1,30 @@
+.antigravity*
+
+**/.claude/settings.local.json
+
+# Tool and AI Assistant files
+.gemini/
+.claude/
+.agents/
+CLAUDE.md
+AGENTS.md
+
+# Per-machine MCP config (regenerated from .agents/config/mcp/)
+.mcp.json
+.codex/
+
+# art-vogue agent tooling
+.opencode/
+AGENT.md
+GEMINI.md
+opencode.json
+.cocoindex_code/
+RUNBOOK.md
+design-sync-export
+ds-bundle/
+.design-sync/
+.ds-sync/
+DESIGN.md
+INTELLIGENCE.md
+tmp/
+.githooks/
