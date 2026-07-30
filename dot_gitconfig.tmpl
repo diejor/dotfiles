@@ -1,0 +1,31 @@
+[user]
+	email = diejorarr@gmail.com
+	name = Diego Rodrigues
+
+[core]
+	autocrlf = false
+
+[alias]
+	adog = log --all --decorate --oneline --graph
+
+[credential "https://github.com"]
+	helper =
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper =
+	helper = !/usr/bin/gh auth git-credential
+{{ if stat (joinPath .chezmoi.homeDir "projects/depot_tools") }}
+# Present only where depot_tools is checked out. depot-tools writes these
+# itself; mirroring them here keeps source and destination in agreement.
+[depot-tools]
+	useNewAuthStack = 1
+{{- range list "android" "aomedia" "beto-core" "boringssl" "chromium" "dawn" "pdfium" "quiche" "skia" "swiftshader" "webrtc" }}
+[credential "https://{{ . }}.googlesource.com"]
+	useHttpPath = yes
+	helper =
+	helper = luci
+{{- end }}
+{{ end }}
+# Machine-local overrides. git ignores this include when the file is absent.
+[include]
+	path = ~/.config/git/local
