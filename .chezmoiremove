@@ -1,0 +1,4 @@
+# Oh My Fish: upstream dead since 2020, replaced by starship.
+.config/fish/conf.d/omf.fish
+.config/fish/conf.d/rustup.fish
+.config/omf

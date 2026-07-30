@@ -1,8 +1,5 @@
+# Environment, aliases and toolchains live in conf.d, which fish sources first.
 if status is-interactive
-    # Commands to run in interactive sessions can go here
+    command -v starship >/dev/null; and starship init fish | source
+    command -v direnv >/dev/null; and direnv hook fish | source
 end
-
-set -gx EDITOR nvim
-set -gx CRYPTOGRAPHY_OPENSSL_NO_LEGACY 1
-fish_add_path $HOME/.local/scripts
-

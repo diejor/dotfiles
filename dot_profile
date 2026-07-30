@@ -1,0 +1,8 @@
+. "$HOME/.config/shell/env.sh"
+
+# Optional global toolchains, each guarded so an absent one is not an error.
+# emsdk is deliberately fish-only: its emsdk_env.sh emits fish syntax even under
+# EMSDK_BASH=1, so sourcing it from bash errors out.
+[ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
+
+[ -n "$BASH_VERSION" ] && [ -f "$HOME/.bashrc" ] && . "$HOME/.bashrc"

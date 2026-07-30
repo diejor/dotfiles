@@ -1,0 +1,14 @@
+. "$HOME/.config/shell/env.sh"
+
+# Everything below is interactive-only.
+[[ $- != *i* ]] && return
+
+. "$HOME/.config/shell/aliases.sh"
+
+if command -v starship >/dev/null; then
+    eval "$(starship init bash)"
+else
+    PS1='[\u@\h \W]\$ '
+fi
+
+command -v direnv >/dev/null && eval "$(direnv hook bash)"

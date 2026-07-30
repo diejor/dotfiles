@@ -1,0 +1,14 @@
+# The cross-shell surface. Rendered into both bash and fish -- edit here, never
+# in a generated file. Paths are relative to $HOME and prepended in order.
+
+[shell]
+path = [".local/bin", ".local/scripts"]
+
+[shell.env]
+EDITOR = "nvim"
+CRYPTOGRAPHY_OPENSSL_NO_LEGACY = "1"
+EMSDK_QUIET = "1"
+
+[shell.alias]
+ls = "ls --color=auto"
+grep = "grep --color=auto"
