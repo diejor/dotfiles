@@ -7,10 +7,21 @@ hl.monitor({
     mode     = "preferred",
     position = "auto",
     scale    = {{ .scale }},
-{{- if eq .role "laptop" }}
-    mirror   = "DP-1",
-{{- end }}
 })
+{{- if eq .role "laptop" }}
+
+-- External HDMI (TV) mirrors the internal panel. This has to be its own rule:
+-- `mirror` in the catch-all above would also match eDP-1 and tell the panel to
+-- mirror itself. Same scale as eDP-1 so both share one logical space and each
+-- scans out natively at 1920x1080 -- a 1:1 copy with no resampling.
+hl.monitor({
+    output   = "HDMI-A-1",
+    mode     = "preferred",
+    position = "auto",
+    scale    = {{ .scale }},
+    mirror   = "eDP-1",
+})
+{{- end }}
 
 local terminal    = "alacritty"
 local fileManager = "thunar"
