@@ -1,20 +1,29 @@
+# Font size is per-machine: .font_size lives in [data] of
+# ~/.config/chezmoi/chezmoi.toml, derived from the role prompt alongside .scale.
+# Rendered pixels = size * 4/3 * <compositor scale>; this host is
+# role={{ .role }} at scale {{ .scale }}.
+#
+# Terminess is the outline build of Terminus. The bitmap original existed only
+# at 12/14/16/18/20/22/24/28/32px and silently snapped to the nearest strike,
+# which is why changing size used to break the rendering. Any size is fine here.
+
 [font]
-size = 16.0
+size = {{ .font_size }}
 
 [font.normal]
-family = "Terminus"
+family = "Terminess Nerd Font Mono"
 style = "Regular"
 
 [font.bold]
-family = "Terminus"
+family = "Terminess Nerd Font Mono"
 style = "Bold"
 
 [font.italic]
-family = "Terminus"
+family = "Terminess Nerd Font Mono"
 style = "Italic"
 
 [font.bold_italic]
-family = "Terminus"
+family = "Terminess Nerd Font Mono"
 style = "Bold Italic"
 
 [window.padding]
