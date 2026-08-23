@@ -2,3 +2,11 @@
 .config/fish/conf.d/omf.fish
 .config/fish/conf.d/rustup.fish
 .config/omf
+
+# Blue-light filter units. Both were wired to systemd targets that never
+# activate under bare Hyprland (no uwsm): wlsunset.service raced default.target
+# and died with "failed to create display" on every boot (77 logged failures),
+# and hyprsunset.service hung off an inactive graphical-session.target.
+# hyprsunset now starts from hyprland.lua instead.
+.config/systemd/user/wlsunset.service
+.config/systemd/user/hyprsunset.service
