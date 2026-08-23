@@ -54,3 +54,12 @@ blue    = '#4f9cfe'
 magenta = '#ff81ca'
 cyan    = '#56d8c9'
 white   = '#dedede'
+
+# Enter and Shift+Enter are indistinguishable by default -- both send CR. Emit
+# ESC+CR instead, the standard encoding for Alt+Enter, so TUIs that want
+# "Enter submits, Shift+Enter inserts a newline" can tell the two apart.
+# Not machine-specific, so it applies to every role.
+[[keyboard.bindings]]
+key = "Return"
+mods = "Shift"
+chars = "\u001B\r"
